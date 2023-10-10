@@ -39,6 +39,8 @@ dependencies {
 
     //TODO 2 - ADDING SPLASHSCREEN FOR API 21
     implementation("androidx.core:core-splashscreen:1.1.0-alpha02")
+    //TODO 8 - ADDING COORDINATOR LAYOUT DEPENDENCIES
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

@@ -14,4 +14,11 @@
         app:indicatorColor="@color/green"
         app:trackColor="@color/gray_bg"/>
 
+    <TextView
+        android:id="@+id/tv_loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/getting_news"
+        android:textSize="18sp"/>
+
 </LinearLayout>

@@ -1,7 +1,8 @@
-package com.nori.muslimmediaapp
+package com.nori.muslimmediaapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nori.muslimmediaapp.R
 
 class SearchableActivity : AppCompatActivity() {
     // TODO 6 - CREATE SEARCHABLE ACTIVITY

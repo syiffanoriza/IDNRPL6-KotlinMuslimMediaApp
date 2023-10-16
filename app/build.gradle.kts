@@ -1,6 +1,10 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+//  TODO 23 - IMPLEMENT PARCELABLE (SEND DATA BUNDLE)
+    id("kotlin-parcelize")
+//  TODO 24 - IMPLEMENT KOTLIN SYMBOL PROCESSING
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -40,10 +44,19 @@ android {
 
 dependencies {
 
-    //TODO 2 - ADDING SPLASHSCREEN FOR API 21
+    // TODO 2 - ADDING SPLASHSCREEN FOR API 21
     implementation("androidx.core:core-splashscreen:1.1.0-alpha02")
-    //TODO 8 - ADDING COORDINATOR LAYOUT DEPENDENCIES
+    // TODO 8 - ADDING COORDINATOR LAYOUT DEPENDENCIES
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+    // TODO 25 - ADDING GLIDE & PICASSO (Image loader) DEPENDENCIES
+    implementation("com.squareup.picasso:picasso:2.8")
+    // TODO 26 - ADDING MOSHI (JSON Converter) DEPENDENCIES
+    implementation("com.squareup.moshi:moshi:1.14.0")
+    // TODO 27 - ADDING KOTLIN CODEGENERATOR DEPENDENCIES
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+    // TODO 28 - ADDING RETROFIT (Getting API Key, HTTP Client with okhttp, Retrieve data via REST-based webservice) DEPENDENCIES
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

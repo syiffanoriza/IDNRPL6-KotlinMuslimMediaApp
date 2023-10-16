@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.nori.muslimmediaapp.databinding.NewsItemOneBinding
 
+// TODO 18 - CREATE NEWS ADAPTER
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     class NewsViewHolder(var binding: NewsItemOneBinding) : RecyclerView.ViewHolder(binding.root)
 

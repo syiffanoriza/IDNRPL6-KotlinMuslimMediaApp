@@ -114,7 +114,7 @@ class NewsViewModel: ViewModel() {
                 ) {
                     if (response.isSuccessful) {
                         Log.i(
-                            "ViewModel"
+                            "ViewModel",
                             "onResponse: ${response.body()}"
                         )
                     } else Log.e(
@@ -152,7 +152,7 @@ class NewsViewModel: ViewModel() {
 
                 override fun onFailure(call: Call<NewsResponse>, t: Throwable) {
                     Log.e(
-                        "ViewModel"
+                        "ViewModel",
                         "onFailure: " + t.localizedMessage
                     )
                 }

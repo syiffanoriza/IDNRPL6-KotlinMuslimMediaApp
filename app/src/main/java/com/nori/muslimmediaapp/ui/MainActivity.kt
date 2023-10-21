@@ -1,8 +1,11 @@
 package com.nori.muslimmediaapp.ui
 
+import android.app.SearchManager
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.widget.SearchView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.android.material.tabs.TabLayoutMediator
 import com.nori.muslimmediaapp.R
@@ -10,7 +13,7 @@ import com.nori.muslimmediaapp.adapter.SectionPagerAdapter
 import com.nori.muslimmediaapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private var _bindng: ActivityMainBinding? = null
+    private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding as ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
@@ -35,7 +38,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu_main, menu)
+        menuInflater.inflate(R.menu.menu_main, menu)
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        (menu?.findItem(R.id.option_search)?.actionView as SearchView).apply {
+            setSearchableInfo(searchManager.getSearchableInfo(componentName))
+        }
+        return true
+    }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

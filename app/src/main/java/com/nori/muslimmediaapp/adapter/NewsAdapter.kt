@@ -33,7 +33,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     override fun getItemCount(): Int = listNews.size
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        val news = ListNews[position]
+        val news = listNews[position]
 
         val date = news.publishedAt?.take(10) // take first 10 char of API data
         val dateArray = date?.split("-")?.toTypedArray() // convert string type to typed array
@@ -74,7 +74,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, DetailActivity::class.java)
-            intent.putExtra(DetailActivity.NEWS_DATA, news)
+            intent.putExtra(DetailActivity.NEWS_DATA, newsDate)
             intent.putExtra(DetailActivity.EXTRA_DATA_DATE, newsDate)
             intent.putExtra(DetailActivity.EXTRA_DATA_TIME, newsTime)
             it.context.startActivity(intent)

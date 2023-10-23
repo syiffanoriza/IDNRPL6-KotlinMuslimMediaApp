@@ -20,6 +20,9 @@ class NewsViewModel: ViewModel() {
     private var _alJazeeraNews = MutableLiveData<NewsResponse>()
     val alJazeeraNews get() = _alJazeeraNews as LiveData<NewsResponse>
 
+    private var _warningForMuslimNews = MutableLiveData<NewsResponse>()
+    val warningForMuslimNews get() = _warningForMuslimNews as LiveData<NewsResponse>
+
     private var _searchNews = MutableLiveData<NewsResponse>()
     val searchNews get() = _searchNews as LiveData<NewsResponse>
 
@@ -64,7 +67,7 @@ class NewsViewModel: ViewModel() {
                         )
                     } else Log.e(
                         "ViewModel",
-                        "onResponse: Cll error with HTTP status code " + response.code()
+                        "onResponse: Call error with HTTP status code " + response.code()
                     )
                 }
 

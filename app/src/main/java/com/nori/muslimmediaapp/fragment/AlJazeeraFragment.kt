@@ -33,6 +33,7 @@ class AlJazeeraFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.loadingView.root.visibility = View.VISIBLE
         _alJazeeraNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+        alJazeeraNewsViewModel.alJazeeraNews()
         alJazeeraNewsViewModel.alJazeeraNews.observe(viewLifecycleOwner) {
             val mAdapter = NewsAdapter()
             mAdapter.setData(it.articles)

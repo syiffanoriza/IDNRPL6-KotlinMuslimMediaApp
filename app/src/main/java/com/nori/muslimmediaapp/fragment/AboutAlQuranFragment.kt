@@ -31,6 +31,7 @@ class AboutAlQuranFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.loadingView.root.visibility = View.VISIBLE
         _quranNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+        quranNewsViewModel.aboutAlQuranNews()
         quranNewsViewModel.aboutAlQuranNews.observe(viewLifecycleOwner) {
             val mAdapter = NewsAdapter()
             mAdapter.setData(it.articles)

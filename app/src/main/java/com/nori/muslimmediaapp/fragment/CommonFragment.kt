@@ -32,6 +32,7 @@ class CommonFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.loadingView.root.visibility = View.VISIBLE
         _commonNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+        commonNewsViewModel.commonMuslimNews()
         commonNewsViewModel.commonMuslimNews.observe(viewLifecycleOwner) {
             val mAdapter = NewsAdapter()
             mAdapter.setData(it.articles)

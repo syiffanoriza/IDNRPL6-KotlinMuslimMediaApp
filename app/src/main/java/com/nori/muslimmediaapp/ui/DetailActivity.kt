@@ -14,7 +14,7 @@ import com.nori.muslimmediaapp.model.network.ArticlesItem
 import com.squareup.picasso.Picasso
 
 class DetailActivity : AppCompatActivity() {
-    // TODO 7 - CREATE DETAILACTIVITY, MODIFY XML
+    // TODO 7 - CREATE DETAIL ACTIVITY, MODIFY XML
     // TODO 30 - EDIT DETAIL ACTIVITY
 
     private var _binding: ActivityDetailBinding? = null //to check if the _binding is non null, to avoid NPE error
@@ -35,6 +35,10 @@ class DetailActivity : AppCompatActivity() {
             SDK_INT >= 33 -> intent.getParcelableExtra(NEWS_DATA, ArticlesItem::class.java)
             else -> intent.getParcelableExtra(NEWS_DATA)
         }
+
+        val newsDate = intent.getStringExtra(EXTRA_DATA_DATE)
+        val newsTime = intent.getStringExtra(EXTRA_DATA_TIME)
+        val publishedAt = newsDate + newsTime
 
         binding.apply {
             tvDetailTitle.text = newsData?.title
@@ -86,10 +90,6 @@ class DetailActivity : AppCompatActivity() {
         onBackPressedDispatcher.onBackPressed()
         return super.onSupportNavigateUp()
     }
-
-    val newsDate = intent.getStringExtra(EXTRA_DATA_DATE)
-    val newsTime = intent.getStringExtra(EXTRA_DATA_TIME)
-    val publishedAt = newsDate + newsTime
 
     companion object {
         const val NEWS_DATA = "data"

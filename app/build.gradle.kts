@@ -8,6 +8,7 @@ plugins {
 }
 
 android {
+    compileSdkPreview = "UpsideDownCake"
     namespace = "com.nori.muslimmediaapp"
     compileSdk = 34
 
@@ -52,6 +53,7 @@ dependencies {
     // TODO 25 - ADDING GLIDE & PICASSO (Image loader) DEPENDENCIES
     implementation("com.squareup.picasso:picasso:2.8")
     // TODO 26 - ADDING MOSHI (JSON Converter) DEPENDENCIES
+    //noinspection GradleDependency
     implementation("com.squareup.moshi:moshi:1.14.0")
     // TODO 27 - ADDING KOTLIN CODEGENERATOR DEPENDENCIES
     ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")

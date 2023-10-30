@@ -6,6 +6,9 @@
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:colorControlNormal">@color/black</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Turn action bar to light -->
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.MuslimMediaApp" parent="Base.Theme.MuslimMediaApp">

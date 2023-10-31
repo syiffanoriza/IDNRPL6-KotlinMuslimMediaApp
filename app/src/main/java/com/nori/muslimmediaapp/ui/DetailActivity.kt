@@ -46,6 +46,8 @@ class DetailActivity : AppCompatActivity() {
             tvDetailPublishAt.text = publishedAt
             Picasso.get().load(newsData?.urlToImage).into(ivDetailImage)
         }
+
+        setWebView()
     }
 
     private fun setWebView(data: ArticlesItem?) {

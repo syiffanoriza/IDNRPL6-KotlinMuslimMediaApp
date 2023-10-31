@@ -150,6 +150,7 @@ class NewsViewModel: ViewModel() {
                             "ViewModel",
                             "onResponse: ${response.body()}"
                         )
+                        _searchNews.postValue(response.body())
                     } else Log.e(
                         "ViewModel",
                         "onResponse: Call error with HTTP status code " + response.code()

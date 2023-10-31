@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="0dp"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -22,7 +22,7 @@
             android:background="@color/white"
             app:layout_scrollFlags="scroll|enterAlways"
             app:logo="@drawable/logo_text"
-            app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
+            app:popupTheme="@android:style/ThemeOverlay.Material.Light"
             app:titleTextColor="@android:color/transparent"/>
 
         <com.google.android.material.tabs.TabLayout

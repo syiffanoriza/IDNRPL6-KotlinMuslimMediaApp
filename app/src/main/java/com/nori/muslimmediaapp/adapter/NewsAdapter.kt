@@ -1,7 +1,6 @@
 package com.nori.muslimmediaapp.adapter
 
 import android.content.Intent
-import android.icu.util.Calendar
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,6 +11,7 @@ import com.nori.muslimmediaapp.model.network.ArticlesItem
 import com.nori.muslimmediaapp.ui.DetailActivity
 import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Locale
 
 // TODO 18 - CREATE NEWS ADAPTER

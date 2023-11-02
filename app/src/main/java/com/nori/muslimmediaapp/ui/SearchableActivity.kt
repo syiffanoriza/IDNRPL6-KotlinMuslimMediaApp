@@ -78,7 +78,7 @@ class SearchableActivity : AppCompatActivity() {
         }
     }
 
-    fun doMySearch(q: String) {
+    private fun doMySearch(q: String) {
         searchViewModel.searchNews(q)
     }
 

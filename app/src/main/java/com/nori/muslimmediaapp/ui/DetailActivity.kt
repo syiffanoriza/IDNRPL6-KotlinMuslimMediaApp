@@ -47,7 +47,7 @@ class DetailActivity : AppCompatActivity() {
             Picasso.get().load(newsData?.urlToImage).into(ivDetailImage)
         }
 
-        setWebView()
+//        setWebView()
     }
 
     private fun setWebView(data: ArticlesItem?) {

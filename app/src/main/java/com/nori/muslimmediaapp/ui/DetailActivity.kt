@@ -45,14 +45,14 @@ class DetailActivity : AppCompatActivity() {
             tvDetailAuthor.text = newsData?.author
             tvDetailPublishAt.text = publishedAt
             Picasso.get().load(newsData?.urlToImage).into(ivDetailImage)
+            setWebView(newsData)
         }
 
-//        setWebView()
     }
 
     private fun setWebView(data: ArticlesItem?) {
         var loadingFinished = true
-        var redirect = false
+        var redirect = true
 
         binding.wvDetail.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
@@ -62,13 +62,14 @@ class DetailActivity : AppCompatActivity() {
                 if (!loadingFinished) {
                     redirect = true
                 }
-                loadingFinished = false
+                loadingFinished = true
                 view?.loadUrl(request?.url.toString())
                 return true
             }
 
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
+                loadingFinished = false
                 // for progressbar visibility
                 binding.loadingView.root.visibility = View.VISIBLE
             }

@@ -160,7 +160,7 @@ class NewsViewModel: ViewModel() {
                 override fun onFailure(call: Call<NewsResponse>, t: Throwable) {
                     Log.e(
                         "ViewModel",
-                        "onFailure: " + t.localizedMessage
+                        "onFailure: ${t.localizedMessage}"
                     )
                 }
             })

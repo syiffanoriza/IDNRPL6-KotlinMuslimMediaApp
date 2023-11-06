@@ -56,7 +56,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         val timeResultFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
             .format(calendar.time).toString()
 
-        // print log info on logcate for date and time
+        // print log info on logcat for date and time
         Log.i("NewsAdapter", "onBindViewHolder: $dateResultFormat")
         Log.i("NewsAdapter", "onBindViewHolder: $timeResultFormat")
         val newsDate = "$dateResultFormat | "
@@ -74,7 +74,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, DetailActivity::class.java)
-            intent.putExtra(DetailActivity.NEWS_DATA, newsDate)
+            intent.putExtra(DetailActivity.NEWS_DATA, news)
             intent.putExtra(DetailActivity.EXTRA_DATA_DATE, newsDate)
             intent.putExtra(DetailActivity.EXTRA_DATA_TIME, newsTime)
             it.context.startActivity(intent)

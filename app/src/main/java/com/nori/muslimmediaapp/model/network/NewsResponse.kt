@@ -25,7 +25,7 @@ data class NewsResponse(
 @Parcelize
 data class Source(
     @Json(name = "name") //JSON Properties mapping
-    val name: String? = null
+    val name: String? = null,
 ): Parcelable
 
 @JsonClass(generateAdapter = true)

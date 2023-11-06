@@ -31,7 +31,7 @@ class DetailActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        @Suppress("DEPRECATION") val newsData = when {
+        @Suppress("DEPRECATION") var newsData = when {
             SDK_INT >= 33 -> intent.getParcelableExtra(NEWS_DATA, ArticlesItem::class.java)
             else -> intent.getParcelableExtra(NEWS_DATA)
         }
@@ -62,7 +62,7 @@ class DetailActivity : AppCompatActivity() {
                 if (!loadingFinished) {
                     redirect = true
                 }
-                loadingFinished = true
+                loadingFinished = false
                 view?.loadUrl(request?.url.toString())
                 return true
             }
